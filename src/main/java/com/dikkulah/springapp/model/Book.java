@@ -17,7 +17,7 @@ public class Book {
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
 
-    @JoinColumn(name = "publisher_id")
+
     @ManyToOne
     private Publisher publisher;
 
@@ -72,7 +72,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "id=" + id + ", title='" + title + '\'' + ", isbn='" + isbn + '\'' + ", authors=" + authors + '}';
+        return "Book{" + "id=" + id + ", title='" + title + '\'' + ", isbn='" + isbn + '\'' +  '}';
     }
 
     @Override

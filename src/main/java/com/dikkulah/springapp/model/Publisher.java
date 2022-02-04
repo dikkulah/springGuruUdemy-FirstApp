@@ -16,6 +16,7 @@ public class Publisher {
     private Long zip;
 
     @OneToMany
+    @JoinColumn(name = "publisher_id")
     private Set<Book> books =new HashSet<>();
 
     public Publisher() {
